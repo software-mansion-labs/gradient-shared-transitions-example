@@ -18,9 +18,6 @@ export default function Layout() {
             title: "Choose mood",
             headerLargeTitle: true,
             headerTransparent: true,
-            headerStyle: {
-              // backgroundColor: "#232E35",
-            },
             headerTintColor: "#FFFFFF",
           }}
         />
