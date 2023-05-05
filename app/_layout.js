@@ -7,7 +7,7 @@ const ColorsContext = React.createContext(null);
 export const useColors = () => React.useContext(ColorsContext);
 
 export default function Layout() {
-  const [colors, setColors] = React.useState([]);
+  const [colors, setColors] = React.useState(["transparent", "transparent"]);
 
   return (
     <ColorsContext.Provider value={{ colors, setColors }}>
