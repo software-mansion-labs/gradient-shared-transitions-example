@@ -5,6 +5,12 @@
       "bundler": "metro"
     },
     "name": "gradient-shared-transitions",
-    "slug": "gradient-shared-transitions"
+    "slug": "gradient-shared-transitions",
+    "android": {
+      "package": "com.swmansion.gradientsharedtransitions"
+    },
+    "ios": {
+      "bundleIdentifier": "com.swmansion.gradientsharedtransitions"
+    }
   }
 }
