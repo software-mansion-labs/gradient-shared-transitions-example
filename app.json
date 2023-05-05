@@ -1,0 +1,10 @@
+{
+  "expo": {
+    "scheme": "acme",
+    "web": {
+      "bundler": "metro"
+    },
+    "name": "gradient-shared-transitions",
+    "slug": "gradient-shared-transitions"
+  }
+}
