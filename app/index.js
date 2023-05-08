@@ -1,5 +1,12 @@
 import React from "react";
-import { View, StyleSheet, Text, ScrollView, Pressable } from "react-native";
+import {
+  View,
+  StyleSheet,
+  Text,
+  ScrollView,
+  Pressable,
+  Dimensions,
+} from "react-native";
 import { useRouter } from "expo-router";
 import { LinearGradient } from "expo-linear-gradient";
 import { useIsFocused } from "@react-navigation/native";
@@ -47,7 +54,7 @@ export default function Home() {
                     style={styles.large}
                   />
                 ))}
-                <View style={[styles.layout, styles.smallGradientContainer]}>
+                <View style={[styles.layout, styles.large]}>
                   {/* next 4 gradients */}
                   {data[key].slice(3, 7).map((colors) => (
                     <AnimatedLinearGradient
@@ -83,7 +90,7 @@ const styles = StyleSheet.create({
     backgroundColor: "#151e23",
   },
   headerGradient: {
-    height: 145,
+    height: Dimensions.get("window").height * 0.2,
     width: "100%",
     marginBottom: 8,
     borderTopLeftRadius: 40,
@@ -106,30 +113,30 @@ const styles = StyleSheet.create({
   },
   gradientContainer: {
     backgroundColor: "#232E35",
+    justifyContent: "space-between",
+    alignItems: "stretch",
     borderRadius: 20,
-    padding: 4,
+    padding: 14,
     margin: 8,
+    gap: 8,
   },
   large: {
-    paddingVertical: 8,
-    paddingHorizontal: 12,
-    margin: 4,
     borderRadius: 20,
-    width: 76,
-    height: 76,
-  },
-  smallGradientContainer: {
-    width: "50%",
+    width: Dimensions.get("window").width * 0.18,
+    height: Dimensions.get("window").width * 0.18,
+    flexWrap: "wrap",
+    justifyContent: "space-between",
+    alignItems: "stretch",
+    gap: 8,
   },
   small: {
-    width: 34,
-    height: 34,
-    borderRadius: 14,
-    margin: 4,
+    width: Dimensions.get("window").width * 0.078,
+    height: Dimensions.get("window").width * 0.078,
+    borderRadius: (Dimensions.get("window").width * 0.078) / 3,
   },
   hidden: {
-    height: 32,
-    width: 32,
+    height: Dimensions.get("window").width * 0.078,
+    width: Dimensions.get("window").width * 0.078,
     borderRadius: 20,
     position: "absolute",
     transform: [{ scale: 0 }],
