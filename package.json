@@ -9,6 +9,7 @@
     "expo": "~48.0.15",
     "expo-blur": "^12.3.0",
     "expo-constants": "~14.2.1",
+    "expo-dev-client": "^2.2.1",
     "expo-linear-gradient": "^12.1.2",
     "expo-linking": "~4.0.1",
     "expo-router": "^1.2.0",
